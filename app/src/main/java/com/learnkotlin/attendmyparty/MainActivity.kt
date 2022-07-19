@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.random.Random
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     var memberName:String = ""
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         member_name.text = "..."
+        main_menu.bringToFront()
 
         btn_join.setOnClickListener{
             var timeNow = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
@@ -34,6 +36,11 @@ class MainActivity : AppCompatActivity() {
             memberName = ""
             time_attend.text = ""
             mate_name.text = ""
+        }
+
+        btn_close.setOnClickListener{
+            this@MainActivity.finish()
+            exitProcess(0)
         }
     }
 }
