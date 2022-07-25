@@ -77,7 +77,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:hint="Input your name here"
+            android:hint="@string/placeholder_input_name"
             android:inputType="text"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
@@ -90,7 +90,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/primary"
-            android:text="Join the party"
+            android:text="@string/btn_join_wording"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="#DDDDDD"
-            android:text="Leave"
+            android:text="@string/btn_leave_wording"
             android:textAllCaps="false"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +120,8 @@
         android:src="@drawable/welcome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="img_welcome_below" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -139,7 +140,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/discoparty" />
+        app:srcCompat="@drawable/discoparty"
+        android:contentDescription="img_welcome_above" />
 
     <TextView
         android:id="@+id/textView"
@@ -148,7 +150,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="212dp"
         android:fontFamily="sans-serif"
-        android:text="Make sure to bring your e-wallet to give donations"
+        android:text="@string/suggest_wording"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/img_below"
         app:layout_constraintEnd_toEndOf="parent"

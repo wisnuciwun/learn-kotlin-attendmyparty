@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AttendMyParty</string>
+    <string name="img_background">background image</string>
+    <string name="menu_wording_1">Request your music</string>
+    <string name="placeholder_input_name">Input your name here</string>
+    <string name="btn_join_wording">Join the party</string>
+    <string name="btn_leave_wording">Leave</string>
+    <string name="suggest_wording">Make sure to bring your e-wallet to give donations</string>
 </resources>

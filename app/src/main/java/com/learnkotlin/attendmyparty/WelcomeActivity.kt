@@ -1,5 +1,6 @@
 package com.learnkotlin.attendmyparty
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -13,7 +14,7 @@ class WelcomeActivity : AppCompatActivity() {
     val partyMate = arrayListOf<String>("Jeremy", "Dave", "Marvin", "Lexy", "Cindy")
     override fun onCreate(savedInstanceState: Bundle?) { //this is one of lifecycle, first render
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_welcome)
+        setContentView(R.layout.activity_welcome) // this is context
         member_name.text = "..."
         main_menu.bringToFront()
 
@@ -26,6 +27,8 @@ class WelcomeActivity : AppCompatActivity() {
             time_attend.text = "You came at ${timeNow}"
             mate_name.text = "Well, you'll take time with ${partyMate[randomPartyMate]}"
             input_member_name.text.clear()
+            val menuIntent = Intent(this, MenuActivity::class.java)
+            startActivity(menuIntent)
         }
 
         btn_leave.setOnClickListener {
