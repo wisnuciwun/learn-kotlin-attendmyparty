@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.system.exitProcess
 
-class WelcomeActivity : AppCompatActivity() {
+class WelcomeActivity : LifecycleActivity() {
     var memberName:String = ""
     val partyMate = arrayListOf<String>("Jeremy", "Dave", "Marvin", "Lexy", "Cindy")
     override fun onCreate(savedInstanceState: Bundle?) { //this is one of lifecycle, first render
