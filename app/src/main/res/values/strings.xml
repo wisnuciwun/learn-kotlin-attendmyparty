@@ -6,4 +6,8 @@
     <string name="btn_join_wording">Join the party</string>
     <string name="btn_leave_wording">Leave</string>
     <string name="suggest_wording">Make sure to bring your e-wallet to give donations</string>
+    <string name="dinner_package_wording_1">Select dinner package</string>
+    <string name="dinner_menu_1">Sandwich + French Fries + Cola</string>
+    <string name="dinner_menu_2">Spaghetti + Chips + Rum</string>
+    <string name="dinner_menu_3">BBQ + Onion Ring + Orange Juice</string>
 </resources>
