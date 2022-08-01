@@ -10,4 +10,5 @@
     <string name="dinner_menu_1">Sandwich + French Fries + Cola</string>
     <string name="dinner_menu_2">Spaghetti + Chips + Rum</string>
     <string name="dinner_menu_3">BBQ + Onion Ring + Orange Juice</string>
+    <string name="wording_load">Processing your order and favorite music</string>
 </resources>

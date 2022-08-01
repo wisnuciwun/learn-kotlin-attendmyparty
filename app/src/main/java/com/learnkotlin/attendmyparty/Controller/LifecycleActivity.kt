@@ -1,4 +1,4 @@
-package com.learnkotlin.attendmyparty
+package com.learnkotlin.attendmyparty.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -39,7 +39,7 @@ open class LifecycleActivity : AppCompatActivity() {
 
     override fun onRestart() {
         Log.d(tryMe, "${javaClass.simpleName} this is onRestart")
-        super.onDestroy()
+        super.onRestart()
     }
 
 }

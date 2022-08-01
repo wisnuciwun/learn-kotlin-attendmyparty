@@ -1,9 +1,9 @@
-package com.learnkotlin.attendmyparty
+package com.learnkotlin.attendmyparty.Controller
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.learnkotlin.attendmyparty.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 import java.text.SimpleDateFormat
 import java.util.*

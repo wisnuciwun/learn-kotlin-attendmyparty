@@ -14,18 +14,21 @@
         android:theme="@style/Theme.AttendMyParty"
         tools:targetApi="31">
         <activity
-            android:theme="@style/AppTheme.NoActionBar"
-            android:name=".DinnerPackages"
+            android:name=".Controller.EndRegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".LifecycleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MenuActivity"
+            android:name=".Controller.DinnerPackages"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".Controller.LifecycleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Controller.MenuActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Controller.WelcomeActivity"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
