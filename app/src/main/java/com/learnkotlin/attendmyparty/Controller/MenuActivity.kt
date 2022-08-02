@@ -4,12 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.learnkotlin.attendmyparty.ATTENDER
 import com.learnkotlin.attendmyparty.FIRST_MUSIC
+import com.learnkotlin.attendmyparty.Model.Attender
 import com.learnkotlin.attendmyparty.R
 import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : LifecycleActivity() {
     var listMusic = arrayListOf<String>()
+    var firstMusic = Attender("","")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,10 +60,12 @@ class MenuActivity : LifecycleActivity() {
     }
 
     fun onHandleChangePage(view: View) {
+        firstMusic.firstMusic = listMusic[0]
         // view: View is important to show next page
         if (listMusic.isNotEmpty()) {
             val dinnerActivity = Intent(this, DinnerPackages::class.java)
-            dinnerActivity.putExtra(FIRST_MUSIC, listMusic[0])
+//            dinnerActivity.putExtra(FIRST_MUSIC, listMusic[0])
+            dinnerActivity.putExtra(ATTENDER, firstMusic)
             startActivity(dinnerActivity)
         } else {
             Toast.makeText(this, "Please select music", Toast.LENGTH_SHORT).show()
