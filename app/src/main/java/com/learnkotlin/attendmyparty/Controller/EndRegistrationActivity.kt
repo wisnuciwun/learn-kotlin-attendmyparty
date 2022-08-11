@@ -14,8 +14,8 @@ class EndRegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_registration)
 
-        val musicsList = intent.getStringExtra(FIRST_MUSIC)
-        val dinnerPackage = intent.getStringExtra(DINNER_PACKAGE)
+//        val musicsList = intent.getStringExtra(FIRST_MUSIC)
+//        val dinnerPackage = intent.getStringExtra(DINNER_PACKAGE)
         val attenderData = intent.getParcelableExtra<Attender>(ATTENDER)
 
         loading_text.text = "Preparing your ${attenderData?.dinnerPackage} while listening ${attenderData?.firstMusic}"

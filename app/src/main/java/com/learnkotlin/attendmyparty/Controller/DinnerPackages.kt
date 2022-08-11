@@ -13,17 +13,28 @@ import com.learnkotlin.attendmyparty.R
 import kotlinx.android.synthetic.main.activity_dinner_packages.*
 
 class DinnerPackages : AppCompatActivity() {
-    var selectedDinner: String = ""
-    var musicsList = ""
+//    var selectedDinner: String = ""
+//    var musicsList = ""
+
     lateinit var attenderData : Attender
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable(ATTENDER, attenderData)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        if(savedInstanceState != null){
+            attenderData = savedInstanceState.getParcelable<Attender>(ATTENDER)!!
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dinner_packages)
-        musicsList = intent.getStringExtra(FIRST_MUSIC).toString();
-
+//        musicsList = intent.getStringExtra(FIRST_MUSIC).toString()
         attenderData = intent.getParcelableExtra<Attender>(ATTENDER)!!
-
-        Log.d("coba", musicsList)
 
         button_finish.setOnClickListener {
             val finishActivity = Intent(this, EndRegistrationActivity::class.java)
@@ -32,6 +43,8 @@ class DinnerPackages : AppCompatActivity() {
 //            finishActivity.putExtra(DINNER_PACKAGE, selectedDinner)
             startActivity(finishActivity)
         }
+
+        Log.d("fafea", "faefa")
     }
 
     fun onHandleChooseDinner(view: View) {
